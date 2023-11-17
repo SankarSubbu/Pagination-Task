@@ -1,0 +1,115 @@
+html,body {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+*,*:after, *:before{
+ margin: inherit;
+ padding: inherit;
+ box-sizing: inherit;
+}
+
+body {
+ display: flex;
+ justify-content: center;
+}
+
+#container {
+ width: 600px;
+ padding: 30px;
+ 
+}
+
+.table table-bordered {
+ width: 100%;
+ border-collapse: collapse;
+}
+
+table thead tr,
+table tfoot tr{
+ background: rgba(0,0,0,0.2);  
+}
+
+table tbody tr {
+ background: rgba(0,0,0,0.08);  
+}
+
+table tbody tr:hover{
+   background: rgba(0,0,0,0.05);
+}
+
+table tr>th {
+ text-align: left;
+}
+
+table tr>th, tr>td {
+ border: 1px solid rgba(0,0,0,0.2);
+ padding: 10px 15px;
+ cursor:pointer;
+ 
+}
+
+ #pagination {
+  display: inline-block;
+  padding:10px;
+  text-align:center;
+ }
+
+ #pagination > a {
+  color: blue;
+  float: left; 
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+ }
+
+ #pagination > a:first-child {
+  border-right: 1px solid rgba(0,0,0,0.2);
+  content:counter(First);
+ }
+
+ #pagination > a:hover {
+  background: rgba(0,0,0,0.03);
+  color: #FB3C00;
+ }
+ #pagination {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+ }
+ #pagination .page {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Style your text here */
+#pagination .page::before {
+  content: attr(data-text);
+  font-weight: bold;
+}
+
+button{
+  display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0069d9;
+}
